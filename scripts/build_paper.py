@@ -98,7 +98,7 @@ def main():
     fragment = fragment.replace("figures/gap-and-noise.png", "figures/gap-and-noise.pdf")
     fragment = fragment.replace(r"\includegraphics[", r"\includegraphics[width=\linewidth,")
     tex = PREAMBLE+fragment+"\n\\end{document}\n"
-    (ROOT / "paper" / (STEM+".tex")).write_text(tex, encoding="utf-8")
+    (ROOT / "paper" / (STEM+".tex")).write_bytes(tex.encode("utf-8"))
     with tempfile.TemporaryDirectory(prefix="contextuality-paper-") as tmp:
         stage = Path(tmp)
         (stage / (STEM+".tex")).write_text(tex, encoding="utf-8")

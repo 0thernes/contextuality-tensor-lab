@@ -87,7 +87,7 @@ Package rerunfilecheck Warning: File `contextuality-tensor.out' has changed.
 (see the transcript file for additional information)
 Output written on contextuality-tensor.xdv (8 pages, 231908 bytes).
 Transcript written on contextuality-tensor.log.
-note: Rerunning TeX because "contextuality-tensor.aux" changed ...
+note: Rerunning TeX because "contextuality-tensor.out" changed ...
 (contextuality-tensor.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (article.cls
@@ -156,9 +156,9 @@ ers A \TU/texgyrepagella(0)/b/n/10 151\TU/texgyrepagella(0)/m/n/10 , 107–108 (
 Output written on contextuality-tensor.xdv (8 pages, 236384 bytes).
 Transcript written on contextuality-tensor.log.
 note: Running xdvipdfmx ...
-[1][2][3][4][5][6][7][8]100255 bytes written
-note: Writing `C:\Users\Alexa\AppData\Local\Temp\contextuality-paper-__wcv_v8\contextuality-tensor.log` (35.3359375 KiB)
-note: Writing `C:\Users\Alexa\AppData\Local\Temp\contextuality-paper-__wcv_v8\contextuality-tensor.pdf` (97.9052734375 KiB)
+[1][2][3][4][5][6][7][8]100256 bytes written
+note: Writing `C:\Users\Alexa\AppData\Local\Temp\contextuality-paper-z0jyqj13\contextuality-tensor.log` (35.3359375 KiB)
+note: Writing `C:\Users\Alexa\AppData\Local\Temp\contextuality-paper-z0jyqj13\contextuality-tensor.pdf` (97.90625 KiB)
 note: Skipped writing 2 intermediate files (use --keep-intermediates to keep them)
 Fontconfig error: Cannot load default config file: No such file: (null)
 warning: contextuality-tensor.tex:299: Overfull \hbox (0.95824pt too wide) in paragraph at lines 297--299

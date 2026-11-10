@@ -8,12 +8,12 @@
       "sha256": "7f22b0b8705ffa262c4146a024392f553f77e927c14f00898ce0934ab56f3708"
     },
     "paper\\contextuality-tensor.pdf": {
-      "bytes": 100255,
-      "sha256": "8548ce48e7a7aea5f4e368dcfad96f10343f5beddc27e8d8e992bed96b874304"
+      "bytes": 100256,
+      "sha256": "2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f"
     },
     "paper\\contextuality-tensor.tex": {
-      "bytes": 27337,
-      "sha256": "f2524093e7becf6364e6eff6dfaeeb06442efb010dea33f6e8eb2c5e5ed2c0c3"
+      "bytes": 27017,
+      "sha256": "8e08ba6fc9f1a6f588b2a59d5698ca4a2efdf75158d725ea5b4da30fb0bd7e8b"
     }
   }
 }
