@@ -1,0 +1,18 @@
+{
+  "observed_at_utc": "2026-11-10T04:04:23Z",
+  "origin_url": "https://github.com/0thernes/contextuality-tensor-lab",
+  "request_list_url": "https://archive.softwareheritage.org/save/list/?search=contextuality-tensor-lab",
+  "request_accepted": true,
+  "request_status": "succeeded",
+  "visit_at_utc": "2026-11-10T03:49:10.297000+00:00",
+  "revision": "de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0",
+  "revision_swhid": "swh:1:rev:de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0",
+  "revision_url": "https://archive.softwareheritage.org/swh:1:rev:de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0;origin=https://github.com/0thernes/contextuality-tensor-lab;visit=swh:1:snp:22b7ffe3ef7bdf33dbc536333ed29b3e86ec2949",
+  "directory_swhid": "swh:1:dir:f1cd98b1ec3f1e2fba4618f470d783e580dcd2ee",
+  "snapshot_swhid": "swh:1:snp:22b7ffe3ef7bdf33dbc536333ed29b3e86ec2949",
+  "local_git_tree": "f1cd98b1ec3f1e2fba4618f470d783e580dcd2ee",
+  "directory_matches_local_git_tree": true,
+  "revision_matches_frozen_release_commit": true,
+  "method": "Ordinary browser Save Code Now request followed to succeeded, opened its archived origin, inspected tip revision and the archive's permalink panel; compared displayed directory identifier with git rev-parse de48ed9^{tree}.",
+  "scope": "The visit contains the frozen research source revision and tree. It preceded creation of the v0.1.0 release tag; the archive shows zero releases at this visit and does not include later status/evidence commits."
+}

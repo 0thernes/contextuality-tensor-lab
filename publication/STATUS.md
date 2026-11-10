@@ -17,8 +17,9 @@ not for historical priority, human review or editorial acceptance.
 | Google Scholar | Public crawlable scholarly metadata provided; indexing not observed | [Paper record](https://0thernes.github.io/contextuality-tensor-lab/paper/) |
 | ORCID | Work metadata prepared; browser is at account sign-in | [BibTeX](contextuality-tensor.bib) |
 | OpenAIRE | No indexed record observed; repository ingestion route prepared | [Route audit](../research/publication-routes.md) |
-| Software Heritage | Save Code Now request accepted at 19:49 on 9 November 2026; ingestion pending when last checked | [Request list](https://archive.softwareheritage.org/save/list/?search=contextuality-tensor-lab) |
-| Internet Archive | Paper upload requires account sign-in; no uploaded item or identifier claimed | [Upload route](https://archive.org/upload) |
+| Software Heritage | Ingestion succeeded; the frozen research revision and matching source directory are archived | [Archived revision](https://archive.softwareheritage.org/swh:1:rev:de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0) |
+| Internet Archive / Wayback | Paper landing page and PDF captured; archived PDF matches the release byte-for-byte | [Paper record snapshot](https://web.archive.org/web/20261110040128/https://0thernes.github.io/contextuality-tensor-lab/paper/), [PDF snapshot](https://web.archive.org/web/20261110040209/https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.pdf) |
+| Internet Archive uploaded item | Separate item upload still requires account sign-in; no uploaded item identifier claimed | [Upload route](https://archive.org/upload) |
 
 ## Frozen research artifact and verification
 
@@ -44,9 +45,37 @@ The [public-site audit](../results/public-site-verification.json),
 [CI comparison](../results/ci-verification.json) and
 [release/source-bundle check](../results/release-verification.json) preserve the details.
 
-No DOI, arXiv identifier, journal submission, Scholar/OpenAIRE indexing or completed
-archival identifier is claimed. Subsequent evidence/status commits do not change
+The subsequent `c349b3c` push also passed both executable/formal verification and
+Pages deployment. [The follow-up CI record](../results/ci-publication-followup.json)
+links the actual completed runs. Subsequent evidence/status commits do not change
 the frozen mathematical sources or paper in the release.
+
+## Completed independent preservation
+
+Software Heritage's Save Code Now request now reports **succeeded**. Its visit at
+03:49:10 UTC on 10 November 2026 preserved the exact revision used by `v0.1.0`:
+
+- Revision: `swh:1:rev:de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0`.
+- Directory: `swh:1:dir:f1cd98b1ec3f1e2fba4618f470d783e580dcd2ee`, matching the local
+  Git tree of that revision.
+- Snapshot: `swh:1:snp:22b7ffe3ef7bdf33dbc536333ed29b3e86ec2949`.
+
+The visit preceded creation of the release tag, so it contains the research
+revision and source tree, not the later GitHub release metadata or later status
+commits. [The archive evidence](../results/software-heritage-verification.json)
+records the observed permanent identifiers and this scope.
+
+Internet Archive captured the scholarly landing page at 04:01:28 UTC and the PDF
+at 04:02:09 UTC on 10 November 2026. Both timestamped replays were opened in the
+browser. The archived PDF payload returned HTTP 200, `application/pdf`, and
+100256 bytes identical to the released file and SHA-256 above. The HTML viewer
+wrapper was distinguished from the embedded PDF payload in the
+[byte-comparison evidence](../results/wayback-verification.json).
+
+These completed Wayback snapshots preserve the paper independently of GitHub.
+They are distinct from an Internet Archive uploaded item, a DOI deposit, or
+editorial acceptance. No DOI, arXiv identifier, journal submission, or
+Scholar/OpenAIRE indexing is claimed.
 
 ## Remaining author-controlled requirements
 

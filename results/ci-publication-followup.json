@@ -1,0 +1,66 @@
+{
+  "observed_at_utc": "2026-11-10T04:01:04.859503+00:00",
+  "repository": "0thernes/contextuality-tensor-lab",
+  "commit": "c349b3c76cb3ce09a2a793c336b603acbee1a4a6",
+  "branch": "main",
+  "event": "push",
+  "status": "pass",
+  "evidence_method": "Read-only gh run list to identify push runs; GitHub connector fetch_workflow_run_jobs to inspect job and step conclusions. No test reruns or remote mutations.",
+  "timestamp_semantics": "completion_reported_at_utc uses GitHub run updatedAt from the completed run snapshot; exact terminal job timestamps were not fetched.",
+  "workflows": [
+    {
+      "id": 42752465926,
+      "name": "Publish research laboratory",
+      "url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465926",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at_utc": "2026-11-10T03:54:47Z",
+      "completion_reported_at_utc": "2026-11-10T03:55:14Z",
+      "jobs": [
+        {
+          "id": 129619040328,
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "successful_key_steps": [
+            "Run actions/upload-pages-artifact@v3",
+            "Deploy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42752465789,
+      "name": "Exact and formal verification",
+      "url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42752465789",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at_utc": "2026-11-10T03:54:47Z",
+      "completion_reported_at_utc": "2026-11-10T03:56:55Z",
+      "jobs": [
+        {
+          "id": 129619036462,
+          "name": "executable",
+          "status": "completed",
+          "conclusion": "success",
+          "successful_key_steps": [
+            "Run python scripts/verify_exact.py",
+            "Run python -m unittest discover -s tests -v",
+            "Run node tests/demo.test.mjs"
+          ]
+        },
+        {
+          "id": 129619036793,
+          "name": "formal",
+          "status": "completed",
+          "conclusion": "success",
+          "successful_key_steps": [
+            "Fetch pinned Mathlib cache",
+            "Build every formal module",
+            "Audit every project theorem"
+          ]
+        }
+      ]
+    }
+  ]
+}
