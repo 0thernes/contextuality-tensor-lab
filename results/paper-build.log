@@ -1,0 +1,168 @@
+note: Running TeX ...
+(contextuality-tensor.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (geometry.sty (keyval.sty) (ifvtex.sty (iftex.sty))) (amsmath.sty
+For additional information on amsmath, use the `?' option.
+(amstext.sty (amsgen.sty)) (amsbsy.sty) (amsopn.sty)) (amssymb.sty
+(amsfonts.sty)) (mathtools.sty (calc.sty) (mhsetup.sty)) (fontspec.sty
+(xparse.sty (expl3.sty (l3backend-xetex.def))) (fontspec-xetex.sty (fontenc.sty
+) (fontspec.cfg))) (unicode-math.sty (unicode-math-xetex.sty (l3keys2e.sty)
+(fix-cm.sty (ts1enc.def)) (unicode-math-table.tex))) (microtype.sty
+(etoolbox.sty) (microtype-xetex.def) (microtype.cfg)) (graphicx.sty
+(graphics.sty (trig.sty) (graphics.cfg) (xetex.def))) (longtable.sty)
+(booktabs.sty) (array.sty) (xcolor.sty (color.cfg)) (hyperref.sty (ltxcmds.sty)
+ (pdftexcmds.sty (infwarerr.sty)) (kvsetkeys.sty) (kvdefinekeys.sty)
+(pdfescape.sty) (hycolor.sty) (letltxmacro.sty) (auxhook.sty) (kvoptions.sty)
+(pd1enc.def) (intcalc.sty) (etexcmds.sty) (puenc.def) (url.sty) (bitset.sty
+(bigintcalc.sty)) (atbegshi-ltx.sty)) (hxetex.def (stringenc.sty)
+(rerunfilecheck.sty (atveryend-ltx.sty) (uniquecounter.sty))) (titlesec.sty)
+(fancyhdr.sty)
+No file contextuality-tensor.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+
+Package unicode-math Warning: Using \overbracket and \underbracket from
+(unicode-math)                `mathtools' package.
+(unicode-math)                 
+(unicode-math)                 Use \Uoverbracket and \Uunderbracket for
+(unicode-math)                original `unicode-math' definition.
+
+
+Package unicode-math Warning: I'm going to overwrite the following commands
+(unicode-math)                from the `mathtools' package: 
+(unicode-math)                 
+(unicode-math)                     \dblcolon, \coloneqq, \Coloneqq, \eqqcolon.
+(unicode-math)                
+(unicode-math)                 
+(unicode-math)                 Note that since I won't overwrite the other
+(unicode-math)                colon-like commands, using them will lead to
+(unicode-math)                inconsistencies.
+
+(nameref.sty (refcount.sty) (gettitlestring.sty))
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+(umsa.fd) (mt-msa.cfg) (umsb.fd) (mt-msb.cfg) [1] [2]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 115.
+
+[3]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 182.
+
+[4]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 230.
+
+[5] [6]
+Overfull \hbox (0.95824pt too wide) in paragraph at lines 297--299
+[]\TU/texgyrepagella(0)/m/n/10 A. Muller and M. Saniga, \TU/texgyrepagella(0)/m
+/it/10 Automated search for highly contextual Kochen-Specker proofs\TU/texgyrep
+agella(0)/m/n/10 , arXiv:2609.19862v1
+
+Underfull \hbox (badness 1571) in paragraph at lines 305--307
+[]\TU/texgyrepagella(0)/m/n/10 A. Peres, \TU/texgyrepagella(0)/m/it/10 Incompat
+ible results of quantum measurements\TU/texgyrepagella(0)/m/n/10 , Physics Lett
+ers A \TU/texgyrepagella(0)/b/n/10 151\TU/texgyrepagella(0)/m/n/10 , 107–108 (1
+990).
+[7]
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[8] (contextuality-tensor.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `contextuality-tensor.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+Output written on contextuality-tensor.xdv (8 pages, 231908 bytes).
+Transcript written on contextuality-tensor.log.
+note: Rerunning TeX because "contextuality-tensor.aux" changed ...
+(contextuality-tensor.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (geometry.sty (keyval.sty) (ifvtex.sty (iftex.sty))) (amsmath.sty
+For additional information on amsmath, use the `?' option.
+(amstext.sty (amsgen.sty)) (amsbsy.sty) (amsopn.sty)) (amssymb.sty
+(amsfonts.sty)) (mathtools.sty (calc.sty) (mhsetup.sty)) (fontspec.sty
+(xparse.sty (expl3.sty (l3backend-xetex.def))) (fontspec-xetex.sty (fontenc.sty
+) (fontspec.cfg))) (unicode-math.sty (unicode-math-xetex.sty (l3keys2e.sty)
+(fix-cm.sty (ts1enc.def)) (unicode-math-table.tex))) (microtype.sty
+(etoolbox.sty) (microtype-xetex.def) (microtype.cfg)) (graphicx.sty
+(graphics.sty (trig.sty) (graphics.cfg) (xetex.def))) (longtable.sty)
+(booktabs.sty) (array.sty) (xcolor.sty (color.cfg)) (hyperref.sty (ltxcmds.sty)
+ (pdftexcmds.sty (infwarerr.sty)) (kvsetkeys.sty) (kvdefinekeys.sty)
+(pdfescape.sty) (hycolor.sty) (letltxmacro.sty) (auxhook.sty) (kvoptions.sty)
+(pd1enc.def) (intcalc.sty) (etexcmds.sty) (puenc.def) (url.sty) (bitset.sty
+(bigintcalc.sty)) (atbegshi-ltx.sty)) (hxetex.def (stringenc.sty)
+(rerunfilecheck.sty (atveryend-ltx.sty) (uniquecounter.sty))) (titlesec.sty)
+(fancyhdr.sty) (contextuality-tensor.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+
+Package unicode-math Warning: Using \overbracket and \underbracket from
+(unicode-math)                `mathtools' package.
+(unicode-math)                 
+(unicode-math)                 Use \Uoverbracket and \Uunderbracket for
+(unicode-math)                original `unicode-math' definition.
+
+
+Package unicode-math Warning: I'm going to overwrite the following commands
+(unicode-math)                from the `mathtools' package: 
+(unicode-math)                 
+(unicode-math)                     \dblcolon, \coloneqq, \Coloneqq, \eqqcolon.
+(unicode-math)                
+(unicode-math)                 
+(unicode-math)                 Note that since I won't overwrite the other
+(unicode-math)                colon-like commands, using them will lead to
+(unicode-math)                inconsistencies.
+
+(nameref.sty (refcount.sty) (gettitlestring.sty)) (contextuality-tensor.out)
+(contextuality-tensor.out) (umsa.fd) (mt-msa.cfg) (umsb.fd) (mt-msb.cfg)
+[1] [2]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 115.
+
+[3] [4]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 230.
+
+[5] [6]
+Overfull \hbox (0.95824pt too wide) in paragraph at lines 297--299
+[]\TU/texgyrepagella(0)/m/n/10 A. Muller and M. Saniga, \TU/texgyrepagella(0)/m
+/it/10 Automated search for highly contextual Kochen-Specker proofs\TU/texgyrep
+agella(0)/m/n/10 , arXiv:2609.19862v1
+
+Underfull \hbox (badness 1571) in paragraph at lines 305--307
+[]\TU/texgyrepagella(0)/m/n/10 A. Peres, \TU/texgyrepagella(0)/m/it/10 Incompat
+ible results of quantum measurements\TU/texgyrepagella(0)/m/n/10 , Physics Lett
+ers A \TU/texgyrepagella(0)/b/n/10 151\TU/texgyrepagella(0)/m/n/10 , 107–108 (1
+990).
+[7] [8] (contextuality-tensor.aux) )
+(see the transcript file for additional information)
+Output written on contextuality-tensor.xdv (8 pages, 236384 bytes).
+Transcript written on contextuality-tensor.log.
+note: Running xdvipdfmx ...
+[1][2][3][4][5][6][7][8]100255 bytes written
+note: Writing `C:\Users\Alexa\AppData\Local\Temp\contextuality-paper-__wcv_v8\contextuality-tensor.log` (35.3359375 KiB)
+note: Writing `C:\Users\Alexa\AppData\Local\Temp\contextuality-paper-__wcv_v8\contextuality-tensor.pdf` (97.9052734375 KiB)
+note: Skipped writing 2 intermediate files (use --keep-intermediates to keep them)
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: contextuality-tensor.tex:299: Overfull \hbox (0.95824pt too wide) in paragraph at lines 297--299
+warning: contextuality-tensor.tex:307: Underfull \hbox (badness 1571) in paragraph at lines 305--307
+warning: contextuality-tensor.tex:299: Overfull \hbox (0.95824pt too wide) in paragraph at lines 297--299
+warning: contextuality-tensor.tex:307: Underfull \hbox (badness 1571) in paragraph at lines 305--307
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

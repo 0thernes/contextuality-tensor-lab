@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the research preprint and the versioned code/proof artifact."
+title: "Exact contextuality degrees for disjoint Mermin configurations"
+type: software
+version: 0.1.0
+date-released: 2026-11-09
+authors:
+  - family-names: Donahue
+    given-names: Alexander S.
+    affiliation: 0thernes LLC
+    orcid: https://orcid.org/0009-0006-8168-9648
+repository-code: https://github.com/0thernes/contextuality-tensor-lab
+url: https://0thernes.github.io/contextuality-tensor-lab/
+license: LicenseRef-Verification
+abstract: "Exact arbitrary-copy degree formulas for full disjoint Mermin-square and pentagram context families, Lean 4 proofs, exact finite certificates, and a running Tsotchke-stack laboratory. AI-assisted research preprint; not peer reviewed."

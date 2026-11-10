@@ -1,0 +1,385 @@
+{
+  "status": "pass",
+  "classification": "Classical software experiment with exact finite mathematics; no quantum hardware",
+  "elapsed_seconds": 3.7039999999979045,
+  "platform": "Windows-10-10.0.29704-SP0",
+  "python": "3.9.13",
+  "numpy": "2.0.2",
+  "verified_vendor_files": 11,
+  "node": "v25.8.2",
+  "gcc": "gcc (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r2) 16.1.0",
+  "qrng": {
+    "status": "pass",
+    "seed": 20261109,
+    "same_build_repeat_identical": true,
+    "different_seed_differs": true,
+    "stream_4096_sha256": "a701593dee1226256324e9c441231a01a6b845c5814971cd61a44a5a6e4fd4c8",
+    "classification": "Seeded classical quantum-inspired software mixer"
+  },
+  "moonlab": {
+    "status": "pass",
+    "engine": "Pinned Tsotchke Moonlab classical CPU/WASM simulator",
+    "qubits": 4,
+    "observables": 18,
+    "contexts": 48,
+    "exact_context_sign_checks": 48,
+    "adapter": "Native Moonlab preparation gates, Pauli-basis rotations, measurement draws and collapse; direct state reads only for independent oracle and QGTL tangents",
+    "rows": [
+      {
+        "preparation": "zero",
+        "components": 1,
+        "shots_per_context_per_component": 16,
+        "trials": 768,
+        "agreed": 768
+      },
+      {
+        "preparation": "all_plus",
+        "components": 1,
+        "shots_per_context_per_component": 16,
+        "trials": 768,
+        "agreed": 768
+      },
+      {
+        "preparation": "ghz",
+        "components": 1,
+        "shots_per_context_per_component": 16,
+        "trials": 768,
+        "agreed": 768
+      },
+      {
+        "preparation": "cross_square_bells",
+        "components": 1,
+        "shots_per_context_per_component": 16,
+        "trials": 768,
+        "agreed": 768
+      },
+      {
+        "preparation": "seeded_complex",
+        "components": 1,
+        "shots_per_context_per_component": 16,
+        "trials": 768,
+        "agreed": 768
+      },
+      {
+        "preparation": "maximally_mixed_ensemble",
+        "components": 16,
+        "shots_per_context_per_component": 2,
+        "trials": 1536,
+        "agreed": 1536
+      }
+    ],
+    "exhaustive_context_trials": 5376,
+    "seeded_context_trials": 4096,
+    "seeded_context_agreed": 4096,
+    "seeded_context_counts": [
+      92,
+      79,
+      89,
+      76,
+      87,
+      93,
+      84,
+      73,
+      84,
+      86,
+      82,
+      88,
+      88,
+      83,
+      91,
+      77,
+      77,
+      88,
+      94,
+      79,
+      89,
+      82,
+      82,
+      102,
+      88,
+      85,
+      89,
+      88,
+      83,
+      106,
+      88,
+      76,
+      84,
+      89,
+      83,
+      89,
+      92,
+      91,
+      88,
+      81,
+      78,
+      81,
+      72,
+      90,
+      79,
+      76,
+      89,
+      86
+    ],
+    "max_pauli_expectation_oracle_error": 5.551115123125783e-16,
+    "repeated_measurement_failures": 0,
+    "flipped_sign_rejections": 5376,
+    "gate_calls": 169255,
+    "projective_measurements": 50484,
+    "qrng": {
+      "seed": 20261109,
+      "consumed_bytes": 309904,
+      "stream_bytes": 1048576,
+      "sha256": "286334af71496119d5b81aab459530b2a1515c5139ff742aeb0c2f58acb21eae",
+      "classification": "Seeded classical quantum-inspired software mixer; no hardware entropy"
+    },
+    "wasm_sha256": "96eadbd927e77dbb6d2d6155c43f6440a8030a226b91c5b17d90ff890cfd0950",
+    "mixed_state_scope": "Uniform computational-basis ensemble is I/16. Each of all sixteen components is tested; no density-matrix backend is used.",
+    "state_independence_scope": "These finite simulations are implementation tests. State independence follows from the exact signed identity products, not from finite sampling."
+  },
+  "qgtl": {
+    "status": "pass",
+    "source": "Actual pinned Tsotchke differential_geometry.c",
+    "kernels": [
+      "diffgeo_compute_fubini_study",
+      "diffgeo_compute_berry_curvature"
+    ],
+    "state_dimension": 16,
+    "parameters": 8,
+    "state_preparation": "Four Ry(theta) then Rz(phi) local rotations followed by a fixed three-CNOT entangler, all executed in Moonlab",
+    "tangent_source": "Central differences of native Moonlab-prepared amplitudes",
+    "difference_step": 1e-05,
+    "analytic_metric": "g_theta_j,theta_j=1/4, g_phi_j,phi_j=sin(theta_j)^2/4; other entries zero",
+    "analytic_curvature": "F_theta_j,phi_j=-sin(theta_j)/2; antisymmetric transpose; other entries zero",
+    "max_direct_inner_product_error": 1.6653345369377348e-16,
+    "max_analytic_error": 1.1219247753047057e-11,
+    "max_gauge_error": 3.172462292866385e-14,
+    "wrong_berry_sign_max_error": 0.9555715168417247,
+    "metric": [
+      [
+        0.2500000000022471,
+        -9.623751447772259e-13,
+        5.059008767825893e-13,
+        -1.4066664499700479e-12,
+        5.193079431270534e-13,
+        6.721302046093785e-13,
+        -3.9004390983140756e-13,
+        -9.212891697286353e-14
+      ],
+      [
+        -9.623751447772259e-13,
+        0.24999999999649436,
+        -3.3828106332152587e-12,
+        1.075457214592757e-12,
+        -1.2443999764125472e-13,
+        -1.8328108581769597e-12,
+        4.440464787387035e-13,
+        1.2387931348752093e-12
+      ],
+      [
+        5.059008767825893e-13,
+        -3.3828106332152587e-12,
+        0.2499999999968013,
+        9.710789030489424e-13,
+        1.4737070889572518e-12,
+        3.066713132509908e-12,
+        -8.123689197391354e-13,
+        7.415319587591531e-13
+      ],
+      [
+        -1.4066664499700479e-12,
+        1.075457214592757e-12,
+        9.710789030489424e-13,
+        0.24999999999696967,
+        -1.498217360546013e-13,
+        -3.0113175436525136e-13,
+        6.76705581539631e-14,
+        -2.0471747678396071e-13
+      ],
+      [
+        5.193079431270534e-13,
+        -1.2443999764125472e-13,
+        1.4737070889572518e-12,
+        -1.498217360546013e-13,
+        0.03269143015886977,
+        5.642708522657358e-14,
+        2.033692658720554e-12,
+        -5.178774076242121e-13
+      ],
+      [
+        6.721302046093785e-13,
+        -1.8328108581769597e-12,
+        3.066713132509908e-12,
+        -3.0113175436525136e-13,
+        5.642708522657358e-14,
+        0.13114797773811748,
+        1.0149658891123181e-12,
+        -1.2809198146612744e-14
+      ],
+      [
+        -3.9004390983140756e-13,
+        4.440464787387035e-13,
+        -8.123689197391354e-13,
+        6.76705581539631e-14,
+        2.033692658720554e-12,
+        1.0149658891123181e-12,
+        0.222071285435151,
+        3.0302149678362866e-13
+      ],
+      [
+        -9.212891697286353e-14,
+        1.2387931348752093e-12,
+        7.415319587591531e-13,
+        -2.0471747678396071e-13,
+        -5.178774076242121e-13,
+        -1.2809198146612744e-14,
+        3.0302149678362866e-13,
+        0.22827923094720529
+      ]
+    ],
+    "berry_curvature": [
+      [
+        -0.0,
+        3.345444201534486e-12,
+        7.550090042177597e-13,
+        -1.327174711794048e-12,
+        -0.1808077159834818,
+        5.960736088202349e-14,
+        -8.115634099998888e-13,
+        2.1348110292888508e-12
+      ],
+      [
+        -3.345444201534486e-12,
+        -0.0,
+        -9.848761752225408e-14,
+        9.261861364848877e-13,
+        5.106652958584404e-13,
+        -0.3621435871809392,
+        4.437342345637697e-12,
+        -4.315189192893151e-12
+      ],
+      [
+        -7.550090042177597e-13,
+        9.848761752225408e-14,
+        -0.0,
+        -9.29601617495218e-14,
+        -4.370124724340791e-12,
+        -6.635694026422506e-13,
+        -0.47124440095592607,
+        -2.7348848534313574e-12
+      ],
+      [
+        1.327174711794048e-12,
+        -9.261861364848877e-13,
+        9.29601617495218e-14,
+        -0.0,
+        1.2932835321914355e-12,
+        1.7396126219265173e-12,
+        2.3285676633533653e-13,
+        -0.4777857584152527
+      ],
+      [
+        0.1808077159834818,
+        -5.106652958584404e-13,
+        4.370124724340791e-12,
+        -1.2932835321914355e-12,
+        -0.0,
+        -2.0985116273213243e-13,
+        -3.317329813177569e-12,
+        6.783205649846702e-13
+      ],
+      [
+        -5.960736088202349e-14,
+        0.3621435871809392,
+        6.635694026422506e-13,
+        -1.7396126219265173e-12,
+        2.0985116273213243e-13,
+        -0.0,
+        -5.070232403324939e-12,
+        1.728984135185546e-12
+      ],
+      [
+        8.115634099998888e-13,
+        -4.437342345637697e-12,
+        0.47124440095592607,
+        -2.3285676633533653e-13,
+        3.317329813177569e-12,
+        5.070232403324939e-12,
+        -0.0,
+        1.3521663110634492e-12
+      ],
+      [
+        -2.1348110292888508e-12,
+        4.315189192893151e-12,
+        2.7348848534313574e-12,
+        0.4777857584152527,
+        -6.783205649846702e-13,
+        -1.728984135185546e-12,
+        -1.3521663110634492e-12,
+        -0.0
+      ]
+    ],
+    "binary_sha256": "7a2ff5e4b556bf7dfc9e3d385bc51a016eb5b861693aaf30c57cd5500bfda1e0",
+    "build_command": [
+      "gcc",
+      "-O2",
+      "-std=gnu11",
+      "-shared",
+      "-fPIC",
+      "-Ithird_party/qgtl/include",
+      "-Ithird_party/qgtl/stub",
+      "third_party/qgtl/src/quantum_geometric/distributed/differential_geometry.c",
+      "-o",
+      "Z:\\[Vibe Coded (AI)]\\CLAUDECODE\\Contextuality Tensor Lab\\build\\stack_diffgeo.dll",
+      "-lm"
+    ],
+    "scope": "Normalized pure-state geometry kernels only. No QGTL GPU/distributed execution or validation."
+  },
+  "eshkol": {
+    "status": "pass",
+    "version": "Eshkol Compiler v1.3.6-evolve",
+    "executable_sha256": "4c71b6a06f7df77cc1dda983a963e0c035e39873247b0f1c667e5a1a811df681",
+    "exact_enumeration": {
+      "local_assignments": 512,
+      "local_scores": [
+        -4,
+        0,
+        4
+      ],
+      "local_multiplicities": [
+        96,
+        320,
+        96
+      ],
+      "product_assignments": 262144,
+      "product_maximum_score": 24,
+      "product_minimum_violations": 12,
+      "product_minimizers": 9216,
+      "pass": true
+    }
+  },
+  "source_sha256": {
+    "scripts/run_stack.py": "9f5697e0427da7165a39543935fdd91d6938fa6bc87db9f00949d1191b81a440",
+    "src/stack_enumeration.esk": "21eaa6b611e15f0687a97168362967d1ecd8d5c29fc40e0605c9bc418c0e9043",
+    "src/stack_moonlab.mjs": "7162c36a06581c1190bf0edb8e30f14656835f9ae32a961bbdf36d3f6a0a6904",
+    "src/stack_qrng.c": "62d3152d4f0d055ae0320dfe1c0aa5ab424b5c08334bf6e7b1ead97ed8bb53ef",
+    "src/stack_README.md": "fcc0e2bb9422cc2d956abb3960649d1ed566574095256780244a1caa4bd52c63",
+    "third_party/.gitattributes": "5455df3a20643047f29afc847f6bf50b02376481986312ee39459ec7113925e0",
+    "third_party/moonlab/LICENSE": "9954a6f797d6e6c5754ad75304fcafea0bee67ffaaeab78351e2c11e9eb5398c",
+    "third_party/moonlab/moonlab.js": "a59ca4d8ff5d015f3acccec82ddcebf7ed1acbb7a8e4d9433bb2efc7b9905673",
+    "third_party/moonlab/moonlab.wasm": "96eadbd927e77dbb6d2d6155c43f6440a8030a226b91c5b17d90ff890cfd0950",
+    "third_party/moonlab/PROVENANCE.md": "1b0cad4f87de2e450d95a8dac814575654fdca8342a0f7d1505a702c5b7080df",
+    "third_party/qgtl/include/quantum_geometric/distributed/differential_geometry.h": "1e6388bfef71a989abf0297520e113826e57f722419b92096fd8fdf4bedea9c3",
+    "third_party/qgtl/LICENSE": "afa02f43ee4f95406248e5ec107402f133abccdeaa5baa9f5c1247a4fba9c55e",
+    "third_party/qgtl/PROVENANCE.md": "a6d144b0f1b072ca7a5db8754b243c717862eebcae215ada7c03144b0c6756f8",
+    "third_party/qgtl/src/quantum_geometric/distributed/differential_geometry.c": "0e626617064f3a65d52ac863c44c624747dde941d6cd7519e01f1d58c7a3e9ef",
+    "third_party/qgtl/stub/cblas.h": "cf2feffa2a1915a42cd6c53af1c54d8a1b9bd7df72f379df249647d26988c816",
+    "third_party/quantum_rng/LICENSE": "afa02f43ee4f95406248e5ec107402f133abccdeaa5baa9f5c1247a4fba9c55e",
+    "third_party/quantum_rng/PROVENANCE.md": "f7cfe1c674ddbf3fc44bbb204ad18e957954067328278cf12f43226b5bcc4123",
+    "third_party/quantum_rng/src/common/secure_memory.h": "578a182172eb19612dc1326b5d67e5abaf6679366287e0fe6ea70da47324bc11",
+    "third_party/quantum_rng/src/quantum_rng/quantum_rng.c": "86dcf1c4836462f8fdfcdf63c39df0e0d52570786c471290d1ea97f250471bce",
+    "third_party/quantum_rng/src/quantum_rng/quantum_rng.h": "d755273c19fa2384384b51f2012b481506c646e0b292a01fc7ccbf00836845fa",
+    "third_party/README.md": "3dea4637158bc68119cbcdb9a10c11dcefae1a4f4e97a10ce118eed3d47f1745",
+    "third_party/SHA256SUMS.json": "309ff926c272980394dddcaf950b5c8be24b160465335f63326f450f4871aba9"
+  }
+}

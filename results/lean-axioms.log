@@ -1,0 +1,194 @@
+ContextualityTensor.square_minimum_closed_form (k : ℕ) :
+  (∃ a, (ContextualityTensor.violations fun i => ContextualityTensor.squareResponse (a i)) = (7 ^ k - 5 ^ k) / 2) ∧
+    ∀ (a : Fin k → Fin 9 → Bool),
+      (7 ^ k - 5 ^ k) / 2 ≤ ContextualityTensor.violations fun i => ContextualityTensor.squareResponse (a i)
+ContextualityTensor.pentagram_minimum_closed_form (k : ℕ) :
+  (∃ a, (ContextualityTensor.violations fun i => ContextualityTensor.pentagramResponse (a i)) = (6 ^ k - 4 ^ k) / 2) ∧
+    ∀ (a : Fin k → Fin 10 → Bool),
+      (6 ^ k - 4 ^ k) / 2 ≤ ContextualityTensor.violations fun i => ContextualityTensor.pentagramResponse (a i)
+ContextualityTensor.square_epsilon_tends_to_one : Filter.Tendsto ContextualityTensor.squareEpsilon Filter.atTop (nhds 1)
+ContextualityTensor.pentagram_epsilon_tends_to_one :
+  Filter.Tendsto ContextualityTensor.pentagramEpsilon Filter.atTop (nhds 1)
+'ContextualityTensor.score_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.score_violations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.square_minimum_closed_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.pentagram_minimum_closed_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.unionContext_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.union_response' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.square_actual_context_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.pentagram_actual_context_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.square_epsilon_is_count_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.pentagram_epsilon_is_count_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.square_epsilon_tends_to_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ContextualityTensor.pentagram_epsilon_tends_to_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ContextualityTensor.global_actual_square_minimum (k : ℕ) :
+  (∃ a,
+      ContextualityTensor.actualViolations ContextualityTensor.squareContext (fun c => c == 5) a =
+        (7 ^ k - 5 ^ k) / 2) ∧
+    ∀ (a : (_ : Fin k) × Fin 9 → Bool),
+      (7 ^ k - 5 ^ k) / 2 ≤ ContextualityTensor.actualViolations ContextualityTensor.squareContext (fun c => c == 5) a
+ContextualityTensor.global_actual_pentagram_minimum (k : ℕ) :
+  (∃ a,
+      ContextualityTensor.actualViolations ContextualityTensor.pentagramContext (fun c => c == 4) a =
+        (6 ^ k - 4 ^ k) / 2) ∧
+    ∀ (a : (_ : Fin k) × Fin 10 → Bool),
+      (6 ^ k - 4 ^ k) / 2 ≤
+        ContextualityTensor.actualViolations ContextualityTensor.pentagramContext (fun c => c == 4) a
+ContextualityTensor.actual_square_epsilon_tends_to_one :
+  Filter.Tendsto ContextualityTensor.actualSquareEpsilon Filter.atTop (nhds 1)
+ContextualityTensor.actual_pentagram_epsilon_tends_to_one :
+  Filter.Tendsto ContextualityTensor.actualPentagramEpsilon Filter.atTop (nhds 1)
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.abs_contextValue"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.abs_response"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.abs_sign"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.actualPentagramEpsilon._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actualPentagramEpsilon_eq"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actualScore_eq_score"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actualSign_union"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.actualSquareEpsilon._proof_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.actualSquareEpsilon._proof_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actualSquareEpsilon_eq"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actualValue_union"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actualViolations_eq_violations"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actual_context_count"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actual_four_qubit_operator_sign"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actual_four_qubit_sign"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actual_pentagram_epsilon_tends_to_one"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.actual_square_epsilon_tends_to_one"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.amplification_limit"}
+AXIOM_AUDIT {"axioms":["propext","Quot.sound"],"theorem":"ContextualityTensor.blockAdjacency.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.block_kernel_sum"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.contextValue.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.contextValue_empty"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.context_count"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.contexts.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.disjoint_blocks_commute"}
+AXIOM_AUDIT {"axioms":[],"theorem":"ContextualityTensor.emptyChoice.eq_1"}
+AXIOM_AUDIT {"axioms":[],"theorem":"ContextualityTensor.extend.eq_1"}
+AXIOM_AUDIT {"axioms":[],"theorem":"ContextualityTensor.extend.eq_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.fourQubitContext.eq_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.fourQubitObservable._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.fourQubitObservable.eq_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.fourQubitVertexList._proof_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.fourQubitVertexList.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_complex_context"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_context_product"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_matrix_list_matches"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_observables_distinct"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_observables_nonidentity"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_vertex_list_matches"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_vertex_list_matches._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_vertex_list_nodup"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.four_qubit_vertex_list_nodup._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.global_actual_pentagram_minimum"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.global_actual_square_minimum"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graphSupportEquiv._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graphSupportEquiv._proof_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graphSupportEquiv._proof_3"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graphSupportEquiv._proof_4"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graphSupportEquiv._proof_5"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graphSupportEquiv._proof_6"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graphSupportWithEmpty.congr_simp"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graph_support_disjoint_iff"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.graph_support_nonempty_disjoint_iff"}
+AXIOM_AUDIT {"axioms":["propext","Quot.sound"],"theorem":"ContextualityTensor.leftEmbed._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.leftEmbed._proof_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.mem_supportFiber"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.mem_supportFiber._simp_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.mem_supportUnion"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.mem_supportUnion._simp_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.optionalContext.eq_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.optionalContext.eq_2"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.optionalSign._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.optionalSign.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.optionalSign.eq_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.optional_context_product"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.optional_sign_matches"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.pentagramContext._proof_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.pentagramEpsilon._proof_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.pentagramEpsilon._proof_2"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.pentagramResponse._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_actual_context_count"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_bound"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_context_count"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_context_injective"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_context_injective._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_context_nonempty"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_context_nonempty._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_degree_nat"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_degree_nat._proof_1_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_epsilon_is_count_ratio"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_epsilon_tends_to_one"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_exact_degree"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_local_bound"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_local_bound._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_local_witness"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_minimum"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_minimum._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_minimum_closed_form"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_violation_lower_bound"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.pentagram_witness"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.ratio_normalization"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.ratio_normalization._simp_1_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.ratio_normalization._simp_1_2"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.ratio_normalization._simp_1_3"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.ratio_normalization._simp_1_4"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.ratio_normalization._simp_1_5"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.ratio_normalization._simp_1_6"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.ratio_normalization._simp_1_7"}
+AXIOM_AUDIT {"axioms":["propext","Quot.sound"],"theorem":"ContextualityTensor.response.congr_simp"}
+AXIOM_AUDIT {"axioms":["propext","Quot.sound"],"theorem":"ContextualityTensor.response.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.rightEmbed._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.score.congr_simp"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.score.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.score_factorization"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.score_upper_bound"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.score_violations"}
+AXIOM_AUDIT {"axioms":["propext","Quot.sound"],"theorem":"ContextualityTensor.selectedContext.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Quot.sound"],"theorem":"ContextualityTensor.selectedContext.eq_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.selectedContext_injective"}
+AXIOM_AUDIT {"axioms":["propext","Quot.sound"],"theorem":"ContextualityTensor.selected_response"}
+AXIOM_AUDIT {"axioms":[],"theorem":"ContextualityTensor.sign.eq_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.squareContext._proof_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.squareContextList._proof_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.squareEpsilon._proof_1"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.squareEpsilon._proof_2"}
+AXIOM_AUDIT {"axioms":["propext"],"theorem":"ContextualityTensor.squareResponse._proof_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_actual_context_count"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_bound"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_commute"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_count"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_injective"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_injective._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_list_matches"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_nonempty"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_nonempty._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_context_products"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_degree_nat"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_degree_nat._proof_1_2"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_epsilon_is_count_ratio"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_epsilon_tends_to_one"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_exact_degree"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_local_bound"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_local_bound._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_local_witness"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_minimum"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_minimum._proof_1_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_minimum_closed_form"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_observables"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_violation_lower_bound"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.square_witness"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.supportFiber.congr_simp"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.supportFiber.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.supportFiber_union"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.supportUnion.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.supportUnion_fibers"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.support_nonempty_iff"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.unionContext.eq_1"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.unionContext_empty"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.unionContext_injective"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.unionContext_nonempty"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.union_response"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.violations.congr_simp"}
+AXIOM_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"theorem":"ContextualityTensor.violations.eq_1"}
+AXIOM_AUDIT_COUNT 153

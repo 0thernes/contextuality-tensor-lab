@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "pandoc": "pandoc 3.13",
+  "tectonic": "Tectonic 0.17.0",
+  "files": {
+    "paper\\contextuality-tensor.md": {
+      "bytes": 23454,
+      "sha256": "7f22b0b8705ffa262c4146a024392f553f77e927c14f00898ce0934ab56f3708"
+    },
+    "paper\\contextuality-tensor.pdf": {
+      "bytes": 100255,
+      "sha256": "8548ce48e7a7aea5f4e368dcfad96f10343f5beddc27e8d8e992bed96b874304"
+    },
+    "paper\\contextuality-tensor.tex": {
+      "bytes": 27337,
+      "sha256": "f2524093e7becf6364e6eff6dfaeeb06442efb010dea33f6e8eb2c5e5ed2c0c3"
+    }
+  }
+}

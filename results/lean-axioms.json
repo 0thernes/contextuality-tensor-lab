@@ -1,0 +1,1180 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-10T03:44:04.995781+00:00",
+  "command": "lake env lean Verification.lean",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "elapsed_seconds": 20.360000000000582,
+  "discovery": "all imported theorem declarations under ContextualityTensor",
+  "theorem_count": 153,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_sha256": {
+    "lean/ContextualityTensor.lean": "71b757f6decb78d732dd2b01c6e9a9982aa8d351f58723c79e6a6e06012d8d4f",
+    "lean/Verification.lean": "48a1cacdeb2404e8f4dda5040aec072307eb7000f265c83ef9bfab0e28594ba5",
+    "lean/lakefile.toml": "87c07bb0a4469f71747b0c01bd4e39b70f41a478e881ea701ca01511c6fcfa76",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "lean/lake-manifest.json": "30e8fa9dddec23bfe7ccf66ad4bd8ad41e4ae9d67e16071f02fd54ef407f9fbe",
+    "lean/ContextualityTensor/ActualModel.lean": "664b33ff7548ed99c5716663103e307b26253d26150943a425ca39ed4e9d6256",
+    "lean/ContextualityTensor/Asymptotics.lean": "ff7648537a1cf63f59d311dfee1dcaa0598b5b97eb738bab71af1d3dd6e458b5",
+    "lean/ContextualityTensor/Pauli.lean": "70015a5687f92e031bd31de0feafeef5c142b621aab8821b6b879bb712c8dc8f",
+    "lean/ContextualityTensor/PhysicalBridge.lean": "e245e1cadc006c1d6706aa6baad82e8376b4c2c476e0a3f425b87aaca5c60c33",
+    "lean/ContextualityTensor/Support.lean": "e32599f331bcf875fb8d3b9a3c495c2ecbdcb3bd589b5b867c0cb4969bc18937",
+    "lean/ContextualityTensor/UnionModel.lean": "7e6692f9d29cafb80383a91897c0df081d2eccb3559ed8548e845d206cc09e3c"
+  },
+  "theorems": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.abs_contextValue"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.abs_response"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.abs_sign"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.actualPentagramEpsilon._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actualPentagramEpsilon_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actualScore_eq_score"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actualSign_union"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.actualSquareEpsilon._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.actualSquareEpsilon._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actualSquareEpsilon_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actualValue_union"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actualViolations_eq_violations"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actual_context_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actual_four_qubit_operator_sign"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actual_four_qubit_sign"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actual_pentagram_epsilon_tends_to_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.actual_square_epsilon_tends_to_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.amplification_limit"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.blockAdjacency.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.block_kernel_sum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.contextValue.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.contextValue_empty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.context_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.contexts.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.disjoint_blocks_commute"
+    },
+    {
+      "axioms": [],
+      "theorem": "ContextualityTensor.emptyChoice.eq_1"
+    },
+    {
+      "axioms": [],
+      "theorem": "ContextualityTensor.extend.eq_1"
+    },
+    {
+      "axioms": [],
+      "theorem": "ContextualityTensor.extend.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.fourQubitContext.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.fourQubitObservable._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.fourQubitObservable.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.fourQubitVertexList._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.fourQubitVertexList.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_complex_context"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_context_product"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_matrix_list_matches"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_observables_distinct"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_observables_nonidentity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_vertex_list_matches"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_vertex_list_matches._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_vertex_list_nodup"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.four_qubit_vertex_list_nodup._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.global_actual_pentagram_minimum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.global_actual_square_minimum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graphSupportEquiv._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graphSupportEquiv._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graphSupportEquiv._proof_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graphSupportEquiv._proof_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graphSupportEquiv._proof_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graphSupportEquiv._proof_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graphSupportWithEmpty.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graph_support_disjoint_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.graph_support_nonempty_disjoint_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.leftEmbed._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.leftEmbed._proof_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.mem_supportFiber"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.mem_supportFiber._simp_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.mem_supportUnion"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.mem_supportUnion._simp_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.optionalContext.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.optionalContext.eq_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.optionalSign._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.optionalSign.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.optionalSign.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.optional_context_product"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.optional_sign_matches"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.pentagramContext._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.pentagramEpsilon._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.pentagramEpsilon._proof_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.pentagramResponse._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_actual_context_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_context_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_context_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_context_injective._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_context_nonempty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_context_nonempty._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_degree_nat"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_degree_nat._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_epsilon_is_count_ratio"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_epsilon_tends_to_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_exact_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_local_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_local_bound._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_local_witness"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_minimum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_minimum._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_minimum_closed_form"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_violation_lower_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.pentagram_witness"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization._simp_1_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization._simp_1_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization._simp_1_3"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization._simp_1_4"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization._simp_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization._simp_1_6"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.ratio_normalization._simp_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.response.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.response.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.rightEmbed._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.score.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.score.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.score_factorization"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.score_upper_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.score_violations"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.selectedContext.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.selectedContext.eq_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.selectedContext_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.selected_response"
+    },
+    {
+      "axioms": [],
+      "theorem": "ContextualityTensor.sign.eq_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.squareContext._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.squareContextList._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.squareEpsilon._proof_1"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.squareEpsilon._proof_2"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "theorem": "ContextualityTensor.squareResponse._proof_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_actual_context_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_commute"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_count"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_injective._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_list_matches"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_nonempty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_nonempty._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_context_products"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_degree_nat"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_degree_nat._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_epsilon_is_count_ratio"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_epsilon_tends_to_one"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_exact_degree"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_local_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_local_bound._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_local_witness"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_minimum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_minimum._proof_1_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_minimum_closed_form"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_observables"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_violation_lower_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.square_witness"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.supportFiber.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.supportFiber.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.supportFiber_union"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.supportUnion.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.supportUnion_fibers"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.support_nonempty_iff"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.unionContext.eq_1"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.unionContext_empty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.unionContext_injective"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.unionContext_nonempty"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.union_response"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.violations.congr_simp"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "theorem": "ContextualityTensor.violations.eq_1"
+    }
+  ]
+}

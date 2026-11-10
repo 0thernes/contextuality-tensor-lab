@@ -1,0 +1,42 @@
+;; Independent exhaustive integer evaluation in Eshkol. Local observable order:
+;; XI IX XX IZ ZI ZZ XZ ZX YY. Rows positive, columns + + -.
+(define (sign mask index)
+  (if (= (remainder (quotient mask (expt 2 index)) 2) 0) 1 -1))
+(define (term m a b c) (* (sign m a) (sign m b) (sign m c)))
+(define (square-score m)
+  (+ (term m 0 1 2) (term m 3 4 5) (term m 6 7 8)
+     (term m 0 3 6) (term m 1 4 7) (- 0 (term m 2 5 8))))
+(define scores (make-vector 512 0))
+(define hist (make-vector 3 0))
+(let loop ((m 0))
+  (if (= m 512) 0
+      (let* ((s (square-score m)) (idx (quotient (+ s 4) 4)))
+        (vector-set! scores m s)
+        (vector-set! hist idx (+ 1 (vector-ref hist idx)))
+        (loop (+ m 1)))))
+(define counts (make-vector 49 0))
+(define best
+  (let outer ((a 0) (bmax -999))
+    (if (= a 512) bmax
+        (outer (+ a 1)
+          (let inner ((b 0) (mx bmax))
+            (if (= b 512) mx
+                (let* ((s (- (* (+ 1 (vector-ref scores a))
+                                  (+ 1 (vector-ref scores b))) 1))
+                       (d (quotient (- 48 s) 2)))
+                  (vector-set! counts d (+ 1 (vector-ref counts d)))
+                  (inner (+ b 1) (if (> s mx) s mx)))))))))
+(define pass
+  (and (= best 24) (= (vector-ref hist 0) 96)
+       (= (vector-ref hist 1) 320) (= (vector-ref hist 2) 96)
+       (= (vector-ref counts 12) 9216)))
+(display "{\"local_assignments\":512,\"local_scores\":[-4,0,4],\"local_multiplicities\":[")
+(display (vector-ref hist 0)) (display ",")
+(display (vector-ref hist 1)) (display ",")
+(display (vector-ref hist 2))
+(display "],\"product_assignments\":262144,\"product_maximum_score\":")
+(display best)
+(display ",\"product_minimum_violations\":") (display (quotient (- 48 best) 2))
+(display ",\"product_minimizers\":") (display (vector-ref counts 12))
+(display ",\"pass\":") (display (if pass "true" "false"))
+(display "}") (newline)

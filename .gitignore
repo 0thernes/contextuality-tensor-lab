@@ -1,0 +1,10 @@
+.lake/
+__pycache__/
+*.pyc
+build/
+node_modules/
+*.aux
+*.log
+*.out
+*.toc
+!results/*.log

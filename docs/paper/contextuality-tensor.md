@@ -1,0 +1,261 @@
+---
+title: "Exact contextuality degrees for disjoint Mermin configurations"
+author: "Alexander S. Donahue"
+date: "9 November 2026"
+---
+
+# Exact contextuality degrees for disjoint Mermin configurations
+
+**Alexander S. Donahue — 0thernes LLC**  
+ORCID: [0009-0006-8168-9648](https://orcid.org/0009-0006-8168-9648)  
+Correspondence: [0_0@0thernes.art](mailto:0_0@0thernes.art)  
+Research preprint, version 0.1.0. Not peer reviewed. Substantive AI assistance disclosed below.
+
+## Abstract
+
+We determine exact contextuality degrees for full context families obtained by placing copies of the Peres–Mermin square or Mermin pentagram on disjoint quantum registers. Adjoining an empty context of value one turns the classical score of the combined configuration into a product of augmented local scores. For $k$ squares, the context count, sharp classical bound and degree are respectively $7^k-1$, $5^k-1$ and $(7^k-5^k)/2$. For $k$ pentagrams they are $6^k-1$, $4^k-1$ and $(6^k-4^k)/2$. The normalized gap therefore tends to one in both families, answering the disjoint-copy limit question posed in Section 6 of Muller and Saniga, arXiv:2609.19862v1. A general bound yields the same limit for every finite contextual seed under this construction. The result concerns full families of union contexts; it does not apply to the ordinary union that retains only the original component contexts. We give a Lean 4 formalization of the exact signed-constraint optimization, an explicit four-qubit matrix realization, exhaustive finite certificates, and a running Tsotchke-stack simulation. Under independent elementary outcome flips, the square and pentagram inequality thresholds remain approximately 6.32% and 5.99%, independent of copy count. Thus the asymptotic normalized gap does not imply unbounded tolerance of readout errors. Priority is subject to a bounded literature search and external review.
+
+## 1. Problem, contribution and relation to earlier work
+
+A state-independent observable contextuality test compares quantum context-product identities with values assigned to the same observables consistently across contexts. A context is a set of compatible observables whose product is a scalar identity. Its sign must be reproduced by a noncontextual assignment if that assignment is to satisfy the associated constraint. The contextuality degree is the smallest number of constraints that any such assignment violates.
+
+Muller and Saniga [1] study full hypergraph supports of anticommutation graphs. Their computations exhibit repeated squares and pentagrams with increasingly large normalized gaps, but leave the asymptotic behavior of the disjoint-copy construction open. We address that specified construction by an exact product identity. The proof is elementary finite algebra; it eliminates the need for a growing SAT search in these families.
+
+The contribution is the all-copy degree formula, its relation to the stated question, and its proof and execution record. The square, pentagram, contextuality degree and general product ideas are established. Contextual fraction already obeys a tensor-product composition law [2], within the broader theory of contextuality [6]; that different measure does not supply the degree formulas here. Quantum XOR-game repetition [3] concerns a different strategy space. No first-ever contextuality amplification principle is claimed.
+
+This is an original mathematical and computational research report with a critical literature synthesis. It is not a statistical meta-analysis: there are no pooled clinical or experimental effect sizes. It neither constructs a smaller three-dimensional Kochen–Specker ray set nor settles the SIC or dimension-six mutually unbiased bases problems.
+
+## 2. Signed configurations and the full union construction
+
+Let $V$ be a finite set of observables and $H$ a finite set of distinct nonempty subsets of $V$. Each $h\in H$ has a sign $s(h)\in\{-1,1\}$. For an assignment $a:V\to\{-1,1\}$ define its signed residual and score by
+
+$$q_a(h)=s(h)\prod_{v\in h}a(v),\qquad
+\beta(a)=\sum_{h\in H}q_a(h).$$
+
+A residual $-1$ means a violated constraint. With $L=|H|$, the classical bound $B$ and degree $d$ satisfy
+
+$$B=\max_a\beta(a),\qquad d=\min_a|\{h:q_a(h)=-1\}|,
+\qquad B=L-2d. \tag{1}$$
+
+The same $B$ bounds stochastic noncontextual models, because they are convex mixtures of deterministic assignments and the score is linear.
+
+Now take pairwise disjoint vertex sets $V_1,\ldots,V_k$, with signed context families $H_i$. Put $\widehat H_i=H_i\cup\{\varnothing\}$ and set $s_i(\varnothing)=q_i(\varnothing)=1$. Define
+
+$$H_* = \left\{\bigcup_{i=1}^k h_i:
+h_i\in\widehat H_i\right\}\setminus\{\varnothing\},
+\qquad s_*\!\left(\bigcup_i h_i\right)=\prod_i s_i(h_i). \tag{2}$$
+
+Each union has a unique tuple of components, since $h_i=h\cap V_i$. Thus
+
+$$L_*+1=\prod_i(|H_i|+1). \tag{3}$$
+
+Only the original vertices are used. In particular two squares have 18 observables, not additional variables for every tensor product of observables. Every global assignment is an unrestricted tuple of local assignments. The operation in (2) adds contexts. Keeping only the original component contexts would instead give additive degrees and would be a different problem.
+
+### 2.1. Connection to full hypergraph supports
+
+For an anticommutation graph $G$, a nonempty vertex subset is in $HS(G)$ precisely when it is independent and its incidence vector lies in the kernel of the adjacency matrix over $\mathbb F_2$ [1, Definition 11]. For a disjoint graph union, adjacency is block diagonal. Independence and the kernel equations are therefore componentwise. Empty intersections satisfy both conditions. Consequently
+
+$$HS\!\left(\bigsqcup_iG_i\right)\cup\{\varnothing\}
+\cong\prod_i\bigl(HS(G_i)\cup\{\varnothing\}\bigr). \tag{4}$$
+
+This proves that (2) supplies the full support in the problem under consideration, without missing cross-component contexts. Our executable independently checks both seeds and the four-qubit case by enumerating every vertex subset.
+
+### 2.2. Quantum realization
+
+Place each seed on a separate tensor register. Extend a seed observable with identities on all other registers. Observables on different registers commute, remain distinct and remain nonidentity. A combined context has product
+
+$$\bigotimes_i\left(\prod_{v\in h_i}P_v\right)
+=\left(\prod_i s_i(h_i)\right)I. \tag{5}$$
+
+This identity holds on every state, including states entangled across registers. State independence is a consequence of the operator identity, not of sampling many initial states. The square family uses $2k$ qubits and the pentagram family $3k$; the limit is not a fixed-four-qubit limit.
+
+## 3. The product theorem and exact optimization
+
+**Theorem 1 (augmented score).** Under (2), for every assignment $a$,
+
+$$1+\beta_*(a)=\prod_{i=1}^k\bigl(1+\beta_i(a|_{V_i})\bigr). \tag{6}$$
+
+**Proof.** Expand the product of the sums $\sum_{h_i\in\widehat H_i}q_i(h_i)$. Each tuple contributes exactly the residual for its union. The all-empty tuple contributes one; all other tuples are the contexts in (2). Subtract the one empty contribution. $\square$
+
+Negative local augmented scores require care. It is generally false that one can simply multiply their positive maxima. The following exact optimization statement handles the signs.
+
+**Theorem 2 (endpoint reduction).** Let $\ell_i$ and $u_i$ be the minimum and maximum attainable values of $1+\beta_i$. Then
+
+$$B_*+1=\max_{z_i\in\{\ell_i,u_i\}}\prod_i z_i. \tag{7}$$
+
+**Proof.** The product is multilinear on the box $\prod_i[\ell_i,u_i]$. Maximizing one coordinate at a time places a maximum at a corner. Every corner is attained by independent choices of component assignments, so passing to the box does not change the maximum. $\square$
+
+The minimum and maximum products can be propagated in linear time in the number of factors, replacing $[l,u]$ at each step by the extrema of $\{l\ell_i,lu_i,u\ell_i,uu_i\}$. No assumption that intermediate scores are attainable is required. Theorem 2 is proved here on paper; the Lean development instead uses the sufficient absolute-value bound needed for the two concrete families.
+
+## 4. Exact degrees for squares and pentagrams
+
+### 4.1. The square
+
+Use the standard square [4,5], with each row and column a context:
+
+$$\begin{array}{ccc}
+XI&IX&XX\\
+IZ&ZI&ZZ\\
+XZ&ZX&YY
+\end{array}.$$
+
+The first five row/column products are $+I$ and the last column has product $-I$. Every observable occurs twice, so the product of all six residuals is $-1$. The number of violated contexts is therefore odd: it is 1, 3 or 5. Consequently
+
+$$\beta\in\{4,0,-4\},\qquad 1+\beta\in\{5,1,-3\}. \tag{8}$$
+
+The assignment that gives every observable $+1$ attains $\beta=4$.
+
+**Theorem 3 (square family).** For $k\ge1$ copies under (2),
+
+$$L_k=7^k-1,\qquad B_k=5^k-1,\qquad
+d_k=\frac{7^k-5^k}{2}. \tag{9}$$
+
+**Proof.** Equation (3) counts the contexts. Equations (6) and (8) give $\beta_*+1\le|\beta_*+1|\le5^k$. The all-positive assignment in every copy attains $5^k-1$. Equation (1) gives the degree. $\square$
+
+### 4.2. The pentagram
+
+The Mermin construction [4] uses ten observables $XII,IXI,IIX,YII,IYI,IIY,XXX,XYY,YXY,YYX$. Its five contexts are
+
+$$\begin{array}{ll}
+XII,IXI,IIX,XXX &(+)\\
+XII,IYI,IIY,XYY &(+)\\
+YII,IXI,IIY,YXY &(+)\\
+YII,IYI,IIX,YYX &(+)\\
+XXX,XYY,YXY,YYX &(-).
+\end{array}$$
+
+Again every observable occurs twice, and the product of residuals is $-1$. Now
+
+$$\beta\in\{3,-1,-5\},\qquad 1+\beta\in\{4,0,-4\}. \tag{10}$$
+
+The all-positive assignment attains the positive endpoint. The same argument gives
+
+**Theorem 4 (pentagram family).** For $k\ge1$,
+
+$$L_k=6^k-1,\qquad B_k=4^k-1,\qquad
+d_k=\frac{6^k-4^k}{2}. \tag{11}$$
+
+For $s$ squares and $t$ pentagrams, with $s+t\ge1$, the same proof gives
+
+$$L=7^s6^t-1,\quad B=5^s4^t-1,\quad
+d=\frac{7^s6^t-5^s4^t}{2}. \tag{12}$$
+
+| Seed | Copies | Qubits | Contexts | Sharp classical bound | Degree |
+|:--|--:|--:|--:|--:|--:|
+| Square | 1 | 2 | 6 | 4 | 1 |
+| Square | 2 | 4 | 48 | 24 | 12 |
+| Square | 3 | 6 | 342 | 124 | 109 |
+| Square | 4 | 8 | 2400 | 624 | 888 |
+| Pentagram | 1 | 3 | 5 | 3 | 1 |
+| Pentagram | 2 | 6 | 35 | 15 | 10 |
+| Pentagram | 3 | 9 | 215 | 63 | 76 |
+| Pentagram | 4 | 12 | 1295 | 255 | 520 |
+
+The two- and three-copy degrees agree with the reported finite values in [1]. The arbitrary-copy formulas, rather than those already reported finite examples, are the contribution under review.
+
+## 5. The limit for every finite contextual seed
+
+Define the normalized ideal gap $\varepsilon_k=2d_k/L_k=1-B_k/L_k$. Equations (9) and (11) immediately imply $\varepsilon_k\to1$.
+
+**Theorem 5 (general contextual seed).** For any finite contextual signed seed with $m$ distinct nonempty contexts, the construction (2) satisfies $\varepsilon_k\to1$.
+
+**Proof.** Contextuality implies $-m\le\beta(a)\le m-2$ for every assignment, hence $|1+\beta(a)|\le m-1$. Thus $B_k\le(m-1)^k-1$. Also $B_k\ge0$: each nonempty residual has mean zero over uniformly chosen independent vertex values, so the mean score is zero. In particular $m\ge2$. Therefore
+
+$$0\le\frac{B_k}{(m+1)^k-1}
+\le\frac{(m-1)^k-1}{(m+1)^k-1}\longrightarrow0. \tag{13}$$
+
+For example, the last ratio is at most $\frac{m+1}{m}\bigl(\frac{m-1}{m+1}\bigr)^k$ for $k\ge1$. Subtract from one. $\square$
+
+Equations (4) and (13) answer the full-support disjoint-copy limit question in the specified version of [1]. This does not claim novelty for all amplification ideas, improve the minimal three-dimensional KS set, or establish an optimum among all possible contextuality configurations.
+
+## 6. Elementary readout noise and statistical cost
+
+$\varepsilon_k$ measures a deficit in a signed context correlator, not a probability of a faulty elementary measurement. A strict violation is guaranteed when every signed correlator is greater than $1-\varepsilon_k$. Equality merely reaches the classical bound.
+
+Consider the explicit model where each recorded observable outcome is independently flipped with probability $p\in[0,1/2]$, and write $\eta=1-2p$. If every local seed context has $r$ observables, a union of $j$ contexts has signed mean $\eta^{rj}$. Summing gives the exact predicted score
+
+$$Q_k(p)=(1+m\eta^r)^k-1. \tag{14}$$
+
+For square copies, this inequality is violated exactly when
+
+$$p<\frac{1-(2/3)^{1/3}}2\approx0.06320977. \tag{15}$$
+
+For pentagram copies, the corresponding threshold is
+
+$$p<\frac{1-(3/5)^{1/4}}2\approx0.05994413. \tag{16}$$
+
+Neither threshold depends on $k$. These are thresholds of the displayed inequality in the stated noise model, not a characterization of all possible contextuality tests on the noisy empirical model. Correlated readout, incompatible implementations and context-dependent disturbance require additional analysis.
+
+At any fixed $p>0$, even below threshold, the normalized margin $(Q_k-B_k)/L_k$ tends to zero. Contexts grow longer as copies are added, and increasingly precise sampling is then necessary. The number of context types grows exponentially, although a uniformly random nonempty context can be drawn without materializing that list: independently choose one of $m+1$ local options and reject the all-empty tuple. Each sampled score is bounded between $-1$ and $1$. The mathematical limit alone does not promise an efficient hardware advantage.
+
+![Exact ideal gaps and the independent-readout noise model. The square threshold is fixed even as the ideal gap increases. Curves are analytic evaluations of Equations (9), (11) and (14), not sampled hardware data.](figures/gap-and-noise.png)
+
+## 7. Verification and running experiment
+
+### 7.1. Exact executable certificates
+
+The standard-library Python verifier uses integer Pauli phases and exact rational arithmetic. It enumerates all 512 square assignments and 1024 pentagram assignments. Their score multiplicities are respectively
+
+$$\{4:96,\;0:320,\;-4:96\},\qquad
+\{3:320,\;-1:640,\;-5:64\}.$$
+
+For two squares it separately enumerates all 262,144 vertex subsets to recover the full hypergraph support and all 262,144 assignments to obtain the classical score. Every assignment satisfies (6). The maximum is 24, the degree is 12, and 9216 assignments attain the maximum. There are 12 contexts of size three and 36 of size six. Larger spectra are obtained by exact convolution of the fully enumerated local multiplicities; those computations are not described as exhaustive global enumeration.
+
+Falsification controls change a quantum sign, introduce incompatible observables, duplicate an observable, duplicate a context and remove a full-support context. A valid proper subfamily remains a valid signed configuration but fails the separate full-support check. Execution with Python assertion optimization is explicitly rejected.
+
+### 7.2. Formal boundary
+
+Lean 4.35.0 with Mathlib v4.35.0 [11] formalizes the finite sum over all nonempty context-choice tuples, its factorization, its relation to the actual number of violated constraints, the local assignment bounds, and the sharp arbitrary-copy square and pentagram bounds with attaining witnesses. It proves that these tuples parameterize distinct actual sets of tagged observable vertices, transports unrestricted vertex assignments to the signed constraints, and proves the exact minima over those actual context sets. Both normalized degree ratios and their limits of one are also formalized. A general graph-support module proves the block-diagonal adjacency-kernel and independence decomposition in (4), starting from arbitrary global vertex subsets. The matrix companion checks the explicit square observables and signs, their distinctness and nonidentity, their four-qubit tensor composition, and the resulting complex matrix identity. The repository records an axiom audit and exact build commands.
+
+The identification of the literal seed Pauli anticommutation graphs with the six and five seed contexts, general-seed Theorem 5, heterogeneous endpoint Theorem 2, mixed-family formula (12), physical realization on arbitrary tensor registers, and the independent-readout model are separately established by the manuscript and executable checks unless the formal manifest explicitly lists a corresponding theorem. Executable output, comments and prose are not Lean proofs. Kernel verification establishes the stated mathematical propositions; it does not establish historical priority, editorial acceptance or the accuracy of a hardware implementation.
+
+### 7.3. Tsotchke stack
+
+The running four-qubit experiment uses pinned upstream components [7–10], with licenses, provenance and checksums retained:
+
+* **Moonlab:** a classical CPU/WebAssembly state-vector simulator. Native gates perform preparation, Pauli-basis rotations and parity accumulation; native measurement routines draw and collapse. Reversing the basis circuit implements a nondestructive Pauli measurement. Context order is shuffled. Product, GHZ, entangled cross-register, seeded complex and maximally mixed ensemble preparations are tested.
+* **quantum_rng:** a seeded classical software mixer supplies the sampling stream. Rejection sampling selects uniformly among 48 contexts. It is not a hardware quantum entropy source.
+* **QGTL:** the Fubini–Study metric and Berry-curvature kernels operate on tangents obtained from actual Moonlab-prepared parameterized states. Comparison with the analytic product-state geometry and an independent direct formula tests the adapter and its curvature convention. These geometry checks validate the integration; they are not premises of the degree theorem.
+* **Eshkol:** a separate program enumerates the square assignments and the two-copy product assignments, independently recovering the local score multiplicities, maximum 24, degree 12 and 9216 minimizers.
+
+The recorded local Moonlab run passed 5376 context trials spanning the stated preparations and 4096 seeded context-sampling trials. It executed 50,484 projective measurements. The maximum Pauli expectation discrepancy against an independent oracle was $5.56\times10^{-16}$; repeat measurements had no discrepancies. All 5376 deliberately wrong context-sign predictions were rejected. These are finite implementation checks, not a replacement for state independence from (5).
+
+The QGTL metric and curvature comparison had maximum analytic error below $1.2\times10^{-11}$, with a wrong-curvature-sign control rejected. Numerical errors, source hashes and platform information are preserved in `results/stack_report.json`. Reproduction regenerates these records; exact floating-point timing and random-stream portability are not assumed across different compiler/libm platforms.
+
+## 8. Literature search, limitations and reproducibility
+
+The literature audit searched the source question and combinations of contextuality degree, disjoint union, product, augmented score, square and pentagram on 9 November 2026. It located nearby contextual-fraction and XOR-repetition results [2,3] and no duplicate primary source for these exact all-copy degree formulas. This bounded search is not proof of priority. The specific inspected version of [1] states the matching limit question as open; unpublished work or subsequent corrections may change that assessment.
+
+The decisive mathematical assumptions are distinct nonempty seed contexts, disjoint vertex alphabets, inclusion of every nonempty tuple in (2), and a single context-independent value for each observable. Violating those assumptions changes the problem. Large normalized gaps do not establish a quantum computational speedup, a hardware fault-tolerance threshold, or an optimum in a different contextuality measure.
+
+The project is self-contained at [the repository](https://github.com/0thernes/contextuality-tensor-lab), with [a live demonstration](https://0thernes.github.io/contextuality-tensor-lab/). Source, certificates, execution records, Lean dependencies and the manuscript are versioned together. The primary commands are:
+
+```text
+python scripts/verify_exact.py
+python -m unittest discover -s tests -v
+python scripts/run_stack.py
+cd lean
+lake exe cache get
+lake build
+lake env lean Verification.lean
+```
+
+The stack runner requires Python with NumPy, Node, GCC and a usable Eshkol installation. The independent exact verifier uses the Python standard library. See the repository for platform-specific paths and the exact distinction between rebuilt and pre-recorded components.
+
+## 9. AI contribution and author review status
+
+AI agents under human direction contributed problem selection, literature search, derivation, formalization, code, adversarial tests and manuscript drafting. The mathematical and executable checks described above are available for independent scrutiny. Internal agent review is not independent external peer review. Public preprint availability and formal verification do not establish that the named human author has personally completed the critical review or declarations required by a journal; those steps are recorded separately in the publication-status file before any journal submission. No scientific award, institutional endorsement or journal acceptance is claimed.
+
+## References
+
+1. A. Muller and M. Saniga, *Automated search for highly contextual Kochen-Specker proofs*, arXiv:2609.19862v1 (2026), especially Definitions 11–13 and Section 6. [doi:10.48550/arXiv.2609.19862](https://doi.org/10.48550/arXiv.2609.19862).
+2. S. Abramsky, R. S. Barbosa and S. Mansfield, *The contextual fraction as a measure of contextuality*, Physical Review Letters **119**, 050504 (2017). [doi:10.1103/PhysRevLett.119.050504](https://doi.org/10.1103/PhysRevLett.119.050504); [arXiv:1705.07918](https://arxiv.org/abs/1705.07918).
+3. R. Cleve, W. Slofstra, F. Unger and S. Upadhyay, *Perfect Parallel Repetition Theorem for Quantum XOR Proof Systems*, Computational Complexity **17**, 282–299 (2008). [doi:10.1007/s00037-008-0250-4](https://doi.org/10.1007/s00037-008-0250-4); [arXiv:quant-ph/0608146](https://arxiv.org/abs/quant-ph/0608146).
+4. N. D. Mermin, *Simple Unified Form for the Major No-Hidden-Variables Theorems*, Physical Review Letters **65**, 3373–3376 (1990). [doi:10.1103/PhysRevLett.65.3373](https://doi.org/10.1103/PhysRevLett.65.3373).
+5. A. Peres, *Incompatible results of quantum measurements*, Physics Letters A **151**, 107–108 (1990). [doi:10.1016/0375-9601(90)90172-K](https://doi.org/10.1016/0375-9601(90)90172-K).
+6. S. Abramsky and A. Brandenburger, *The sheaf-theoretic structure of non-locality and contextuality*, New Journal of Physics **13**, 113036 (2011). [arXiv:1102.0264](https://arxiv.org/abs/1102.0264).
+7. Tsotchke, *Moonlab*, pinned source revision `cd3b2347e3739327548708073d7e4ac710cc6a6c`. [Upstream repository](https://github.com/tsotchke/moonlab).
+8. Tsotchke, *quantum_geometric_tensor*, pinned revision `770994aa8ddd858e6bb16eebb25250a7b9f67c96`. [Upstream repository](https://github.com/tsotchke/quantum_geometric_tensor).
+9. Tsotchke, *quantum_rng*, pinned revision `1a77e77f803c63883349b658361c06401cd8ceb7`. [Upstream repository](https://github.com/tsotchke/quantum_rng).
+10. Tsotchke, *Eshkol*. Local execution used compiler `1.3.6-evolve`; the runner records its executable and toolchain. [Upstream repository](https://github.com/tsotchke/eshkol).
+11. The Lean community, *Lean 4* and *Mathlib*. This artifact pins Lean 4.35.0 and Mathlib v4.35.0. [Lean](https://github.com/leanprover/lean4); [Mathlib](https://github.com/leanprover-community/mathlib4).

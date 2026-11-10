@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "checks": [
+    "initial exact certificate",
+    "interactive assignment flip and reset",
+    "exact sign negative control",
+    "worker direct exhaustive enumeration",
+    "native browser Moonlab: five preparations, 1920 context shots",
+    "BigInt pentagram counts and high-noise model",
+    "downloaded live certificate",
+    "390px mobile layout without horizontal overflow"
+  ],
+  "simulations": [
+    {
+      "preparation": "ghz",
+      "status": "PASS · All 48 context identities held in this run. 6,754 native gate calls, 0.07 s. This live result is included in the downloadable certificate."
+    },
+    {
+      "preparation": "cross",
+      "status": "PASS · All 48 context identities held in this run. 6,754 native gate calls, 0.04 s. This live result is included in the downloadable certificate."
+    },
+    {
+      "preparation": "plus",
+      "status": "PASS · All 48 context identities held in this run. 6,754 native gate calls, 0.04 s. This live result is included in the downloadable certificate."
+    },
+    {
+      "preparation": "complex",
+      "status": "PASS · All 48 context identities held in this run. 6,761 native gate calls, 0.03 s. This live result is included in the downloadable certificate."
+    },
+    {
+      "preparation": "mixed",
+      "status": "PASS · All 48 context identities held in this run. 7,527 native gate calls, 0.03 s. This live result is included in the downloadable certificate."
+    }
+  ],
+  "pageErrors": [],
+  "browser": "156.0.8078.81",
+  "scope": "Real local Chrome headless browser, live WASM and module worker; not a physical quantum experiment"
+}

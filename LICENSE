@@ -1,0 +1,18 @@
+Contextuality Tensor Lab
+Copyright (c) 2026 0thernes LLC (Alexander S. Donahue). All rights reserved.
+
+Verification licence
+
+Permission is granted, free of charge, to any person to download, build, run and
+study this repository for the purpose of checking, reproducing or refereeing the
+results it reports, and to quote from it with attribution. Redistribution of
+modified versions and commercial use require the written permission of the
+copyright holder.
+
+This licence covers the files written for this project. Files under third_party/
+and docs/vendor/ retain their authors' own licences. See their provenance and
+LICENSE files.
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY ARISING FROM THE WORK OR ITS USE.
