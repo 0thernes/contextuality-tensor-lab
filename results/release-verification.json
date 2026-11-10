@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "release": "https://github.com/0thernes/contextuality-tensor-lab/releases/tag/v0.1.0",
+  "anonymous_pdf_status": 200,
+  "pdf_sha256": "2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f",
+  "downloaded_asset_checksums_verified_before_publication": 13,
+  "arxiv_source_isolated_build": "passed",
+  "source_pdf_pages": 8,
+  "extracted_text_identical": true,
+  "arxiv_submission": "not submitted"
+}

@@ -5,10 +5,48 @@ mathematical research preprint, not a peer-reviewed article or statistical
 meta-analysis. A compiled Lean proof is evidence for its precise propositions,
 not for historical priority, human review or editorial acceptance.
 
-The GitHub repository and site publication are being verified for this release.
-This file is updated with the actual public links and observed outcomes before
-the final publication report. No DOI, arXiv identifier, journal submission,
-Scholar indexing, OpenAIRE ingestion or archival identifier is claimed here.
+| Destination | Observed status | Evidence |
+|---|---|---|
+| GitHub repository | Public; committed locally and pushed | [Repository](https://github.com/0thernes/contextuality-tensor-lab) |
+| Versioned research release | Published `v0.1.0`; 14 assets, 13 content checksums verified | [Release](https://github.com/0thernes/contextuality-tensor-lab/releases/tag/v0.1.0) |
+| Paper | Public eight-page PDF and scholarly landing page | [Paper record](https://0thernes.github.io/contextuality-tensor-lab/paper/) |
+| Working demonstration | Public; exhaustive check and 1536/1536 Moonlab context shots observed on the served site | [Live lab](https://0thernes.github.io/contextuality-tensor-lab/) |
+| arXiv | Source bundle prepared and independently recompiled; author review and declarations pending | [Source package](https://github.com/0thernes/contextuality-tensor-lab/releases/download/v0.1.0/contextuality-tensor-arxiv-source.zip) |
+| Journal of Physics A | Manuscript, evidence and cover-letter draft ready; author review/declarations pending | [Cover-letter draft](JPHYS-A-COVER-LETTER-DRAFT.md) |
+| Zenodo | Not deposited; current human-research-basis eligibility unresolved | Policy below |
+| Google Scholar | Public crawlable scholarly metadata provided; indexing not observed | [Paper record](https://0thernes.github.io/contextuality-tensor-lab/paper/) |
+| ORCID | Work metadata prepared; browser is at account sign-in | [BibTeX](contextuality-tensor.bib) |
+| OpenAIRE | No indexed record observed; repository ingestion route prepared | [Route audit](../research/publication-routes.md) |
+| Software Heritage | Save Code Now request accepted at 19:49 on 9 November 2026; ingestion pending when last checked | [Request list](https://archive.softwareheritage.org/save/list/?search=contextuality-tensor-lab) |
+| Internet Archive | Paper upload requires account sign-in; no uploaded item or identifier claimed | [Upload route](https://archive.org/upload) |
+
+## Frozen research artifact and verification
+
+Release `v0.1.0` targets commit `de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0`.
+The PDF is 100256 bytes and has SHA-256
+`2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f`.
+Anonymous release downloading returned these exact bytes. The isolated arXiv
+source bundle produced eight pages with text identical to the released PDF.
+
+[Ubuntu verification run 42751584064](https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584064)
+passed exact Python verification, 11 tests, independent JavaScript enumeration,
+the complete Lean build and the 153-declaration axiom allowlist audit. The Linux
+audit's formal-source hashes match the local Windows audit exactly. Generated
+auxiliary declarations are included in the count; it is not a count of independent
+scientific discoveries. All audited axioms are within `propext`, `Classical.choice`,
+and `Quot.sound`.
+
+[Pages deployment](https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584035)
+succeeded after enabling Pages for the new repository. All 18 served files match
+the frozen `docs/` Git blobs byte-for-byte. The first deployment attempt preceded
+Pages enablement and failed; the successful rerun is the publication evidence.
+The [public-site audit](../results/public-site-verification.json),
+[CI comparison](../results/ci-verification.json) and
+[release/source-bundle check](../results/release-verification.json) preserve the details.
+
+No DOI, arXiv identifier, journal submission, Scholar/OpenAIRE indexing or completed
+archival identifier is claimed. Subsequent evidence/status commits do not change
+the frozen mathematical sources or paper in the release.
 
 ## Remaining author-controlled requirements
 

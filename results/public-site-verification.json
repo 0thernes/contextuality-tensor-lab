@@ -1,0 +1,290 @@
+{
+  "checked_at_utc": "2026-11-10T03:50:24.793091+00:00",
+  "source_commit": "de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0",
+  "base_url": "https://0thernes.github.io/contextuality-tensor-lab/",
+  "comparison": "Binary HTTP response bytes compared with git show COMMIT:docs/PATH; working-tree bytes not used",
+  "scope": "Anonymous read-only HTTP verification. Browser behavior is audited separately. No remote writes.",
+  "status": "pass",
+  "tracked_docs_files": 18,
+  "public_content_files": 16,
+  "exact_matches": 18,
+  "missing_or_non200_paths": [],
+  "repository_control_paths": [
+    "docs/.nojekyll",
+    "docs/vendor/.gitattributes"
+  ],
+  "files": [
+    {
+      "path": "docs/.nojekyll",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/.nojekyll",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/.nojekyll",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "git_bytes": 0,
+      "served_bytes": 0,
+      "git_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "served_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_match": true
+    },
+    {
+      "path": "docs/app.js",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/app.js",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/app.js",
+      "http_status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "git_bytes": 7899,
+      "served_bytes": 7899,
+      "git_sha256": "59b74bdad93c22e93f7e126d90d87aed25a399f98effb48fd5fd522d1adf99e0",
+      "served_sha256": "59b74bdad93c22e93f7e126d90d87aed25a399f98effb48fd5fd522d1adf99e0",
+      "exact_match": true
+    },
+    {
+      "path": "docs/index.html",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/index.html",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/index.html",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "git_bytes": 9937,
+      "served_bytes": 9937,
+      "git_sha256": "d326522b2b38c9329c0d6aeef4128099e77f1acf43c9dd1b0d3d4970884144e8",
+      "served_sha256": "d326522b2b38c9329c0d6aeef4128099e77f1acf43c9dd1b0d3d4970884144e8",
+      "exact_match": true
+    },
+    {
+      "path": "docs/lab.mjs",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/lab.mjs",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/lab.mjs",
+      "http_status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "git_bytes": 3191,
+      "served_bytes": 3191,
+      "git_sha256": "9c67a3ed7db34e3eea68d345308e01a68cade86a202101a33acf5274ac669015",
+      "served_sha256": "9c67a3ed7db34e3eea68d345308e01a68cade86a202101a33acf5274ac669015",
+      "exact_match": true
+    },
+    {
+      "path": "docs/moonlab_live.mjs",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/moonlab_live.mjs",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/moonlab_live.mjs",
+      "http_status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "git_bytes": 4673,
+      "served_bytes": 4673,
+      "git_sha256": "bebe9d256582c9e41eeb32e4f56e383592bb6a78278f42a623008b9e95342b25",
+      "served_sha256": "bebe9d256582c9e41eeb32e4f56e383592bb6a78278f42a623008b9e95342b25",
+      "exact_match": true
+    },
+    {
+      "path": "docs/paper/contextuality-tensor.md",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.md",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.md",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "git_bytes": 23454,
+      "served_bytes": 23454,
+      "git_sha256": "7f22b0b8705ffa262c4146a024392f553f77e927c14f00898ce0934ab56f3708",
+      "served_sha256": "7f22b0b8705ffa262c4146a024392f553f77e927c14f00898ce0934ab56f3708",
+      "exact_match": true
+    },
+    {
+      "path": "docs/paper/contextuality-tensor.pdf",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.pdf",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "git_bytes": 100256,
+      "served_bytes": 100256,
+      "git_sha256": "2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f",
+      "served_sha256": "2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f",
+      "exact_match": true
+    },
+    {
+      "path": "docs/paper/contextuality-tensor.tex",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.tex",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.tex",
+      "http_status": 200,
+      "content_type": "application/x-tex",
+      "git_bytes": 27017,
+      "served_bytes": 27017,
+      "git_sha256": "8e08ba6fc9f1a6f588b2a59d5698ca4a2efdf75158d725ea5b4da30fb0bd7e8b",
+      "served_sha256": "8e08ba6fc9f1a6f588b2a59d5698ca4a2efdf75158d725ea5b4da30fb0bd7e8b",
+      "exact_match": true
+    },
+    {
+      "path": "docs/paper/index.html",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/paper/index.html",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/paper/index.html",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "git_bytes": 3489,
+      "served_bytes": 3489,
+      "git_sha256": "7149622ff7773955062512daace352474cd48ffa0199e640fec21dc9212c44e8",
+      "served_sha256": "7149622ff7773955062512daace352474cd48ffa0199e640fec21dc9212c44e8",
+      "exact_match": true
+    },
+    {
+      "path": "docs/results/stack_report.json",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/results/stack_report.json",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/results/stack_report.json",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "git_bytes": 12370,
+      "served_bytes": 12370,
+      "git_sha256": "e50f1a752290f6d93b3f8ac9c82dd3dc29d53aac8cca16d8f483487c24955fb6",
+      "served_sha256": "e50f1a752290f6d93b3f8ac9c82dd3dc29d53aac8cca16d8f483487c24955fb6",
+      "exact_match": true
+    },
+    {
+      "path": "docs/style.css",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/style.css",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/style.css",
+      "http_status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "git_bytes": 10647,
+      "served_bytes": 10647,
+      "git_sha256": "a0034e2328b14de7915993d93cc0eae676fb67bd543c5dd5d560d305d2b48d86",
+      "served_sha256": "a0034e2328b14de7915993d93cc0eae676fb67bd543c5dd5d560d305d2b48d86",
+      "exact_match": true
+    },
+    {
+      "path": "docs/vendor/.gitattributes",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/.gitattributes",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/.gitattributes",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "git_bytes": 8,
+      "served_bytes": 8,
+      "git_sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "served_sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "exact_match": true
+    },
+    {
+      "path": "docs/vendor/NOTICE.md",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/NOTICE.md",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/NOTICE.md",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "git_bytes": 1169,
+      "served_bytes": 1169,
+      "git_sha256": "05a108dab74693f9ee6e4bd354440569e4a57e01d4d69b6ed00bc77f4ab99e5a",
+      "served_sha256": "05a108dab74693f9ee6e4bd354440569e4a57e01d4d69b6ed00bc77f4ab99e5a",
+      "exact_match": true
+    },
+    {
+      "path": "docs/vendor/moonlab/LICENSE",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/LICENSE",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/LICENSE",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "git_bytes": 1091,
+      "served_bytes": 1091,
+      "git_sha256": "9954a6f797d6e6c5754ad75304fcafea0bee67ffaaeab78351e2c11e9eb5398c",
+      "served_sha256": "9954a6f797d6e6c5754ad75304fcafea0bee67ffaaeab78351e2c11e9eb5398c",
+      "exact_match": true
+    },
+    {
+      "path": "docs/vendor/moonlab/PROVENANCE.md",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/PROVENANCE.md",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/PROVENANCE.md",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "git_bytes": 1683,
+      "served_bytes": 1683,
+      "git_sha256": "1b0cad4f87de2e450d95a8dac814575654fdca8342a0f7d1505a702c5b7080df",
+      "served_sha256": "1b0cad4f87de2e450d95a8dac814575654fdca8342a0f7d1505a702c5b7080df",
+      "exact_match": true
+    },
+    {
+      "path": "docs/vendor/moonlab/moonlab.js",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/moonlab.js",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/moonlab.js",
+      "http_status": 200,
+      "content_type": "application/javascript; charset=utf-8",
+      "git_bytes": 283439,
+      "served_bytes": 283439,
+      "git_sha256": "a59ca4d8ff5d015f3acccec82ddcebf7ed1acbb7a8e4d9433bb2efc7b9905673",
+      "served_sha256": "a59ca4d8ff5d015f3acccec82ddcebf7ed1acbb7a8e4d9433bb2efc7b9905673",
+      "exact_match": true
+    },
+    {
+      "path": "docs/vendor/moonlab/moonlab.wasm",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/moonlab.wasm",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/vendor/moonlab/moonlab.wasm",
+      "http_status": 200,
+      "content_type": "application/wasm",
+      "git_bytes": 1484413,
+      "served_bytes": 1484413,
+      "git_sha256": "96eadbd927e77dbb6d2d6155c43f6440a8030a226b91c5b17d90ff890cfd0950",
+      "served_sha256": "96eadbd927e77dbb6d2d6155c43f6440a8030a226b91c5b17d90ff890cfd0950",
+      "exact_match": true
+    },
+    {
+      "path": "docs/worker.mjs",
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/worker.mjs",
+      "final_url": "https://0thernes.github.io/contextuality-tensor-lab/worker.mjs",
+      "http_status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "git_bytes": 239,
+      "served_bytes": 239,
+      "git_sha256": "37bd6ff65958b42b6b1248cf62839fe25cbaedca77bb7bb5cc6839e961d2c923",
+      "served_sha256": "37bd6ff65958b42b6b1248cf62839fe25cbaedca77bb7bb5cc6839e961d2c923",
+      "exact_match": true
+    }
+  ],
+  "scholarly_metadata": {
+    "citation_title": [
+      "Exact contextuality degrees for disjoint Mermin configurations"
+    ],
+    "citation_author": [
+      "Donahue, Alexander S."
+    ],
+    "citation_publication_date": [
+      "2026/11/09"
+    ],
+    "citation_technical_report_institution": [
+      "0thernes LLC"
+    ],
+    "citation_pdf_url": [
+      "https://0thernes.github.io/contextuality-tensor-lab/paper/contextuality-tensor.pdf"
+    ]
+  },
+  "required_scholarly_metadata_present": true,
+  "pdf": {
+    "pages": 8,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Exact contextuality degrees for disjoint Mermin configurations",
+      "/Author": "Alexander S. Donahue; 0thernes LLC",
+      "/Producer": "xdvipdfmx (0.1)",
+      "/CreationDate": "D:20261110034601-00'00'"
+    },
+    "first_page_text": "Exact contextuality degrees\nfor disjoint Mermin configurations\nAlexander S. Donahue\n0thernes LLC\nORCID 0009-0006-8168-9648\n0_0@0thernes.art\n9 November 2026 \u2022 Version 0.1.0\nResearch preprint; not peer reviewed. Substantive AI assistance disclosed in Section 9.\nAbstract\nWe determine exact contextuality degrees for full context families obtained by placing copies of the Peres\u2013\nMermin square or Mermin pentagram on disjoint quantum registers. Adjoining an empty context of value\none turns the classical score of the combined configuration into a product of augmented local scores. For \ud835\udc58\nsquares, the context count, sharp classical bound and degree are respectively7\ud835\udc58\u22121, 5\ud835\udc58\u22121 and (7\ud835\udc58\u22125\ud835\udc58)/2. For\n\ud835\udc58 pentagrams they are 6\ud835\udc58 \u2212 1, 4\ud835\udc58 \u2212 1 and (6\ud835\udc58 \u2212 4\ud835\udc58)/2. The normalized gap therefore tends to one in both fami-\nlies, answering the disjoint-copy limit question posed in Section 6 of Muller and Saniga, arXiv:2609.19862v1.\nA general bound yields the same limit for every finite contextual seed under this construction. The result\nconcerns full families of union contexts; it does not apply to the ordinary union that retains only the orig-\ninal component contexts. We give a Lean 4 formalization of the exact signed-constraint optimization, an\nexplicit four-qubit matrix realization, exhaustive finite certificates, and a running Tsotchke-stack simulation.\nUnder independent elementary outcome flips, the square and pentagram inequality thresholds remain ap-\nproximately 6.32% and 5.99%, independent of copy count. Thus the asymptotic normalized gap does not\nimply unbounded tolerance of readout errors. Priority is subject to a bounded literature search and external\nreview.\n1. Problem, contribution and relation to earlier work\nA state-independent observable contextuality test compares quantum context-product identities with val-\nues assigned to the same observables consistently across contexts. A context is a set of compatible observ-\nables whose product is a scalar identity. Its sign must be reproduced by a noncontextual assignment if\nthat assignment is to satisfy the associated constraint. The contextuality degree is the smallest number of\nconstraints that any such assignment violates.\nMuller and",
+    "sha256": "2d0f0d2af4177a48d5691286b470b7b14d709646e1d1c4874ce04795408e8b6f"
+  },
+  "provenance": {
+    "moonlab_mit_license_present": true,
+    "upstream_commit_in_provenance": true,
+    "browser_sampler_disclosed": true,
+    "cpu_simulation_disclosed": true
+  },
+  "directory_url_aliases": [
+    {
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/",
+      "source_path": "docs/index.html",
+      "http_status": 200,
+      "bytes": 9937,
+      "sha256": "d326522b2b38c9329c0d6aeef4128099e77f1acf43c9dd1b0d3d4970884144e8",
+      "exact_match": true
+    },
+    {
+      "url": "https://0thernes.github.io/contextuality-tensor-lab/paper/",
+      "source_path": "docs/paper/index.html",
+      "http_status": 200,
+      "bytes": 3489,
+      "sha256": "7149622ff7773955062512daace352474cd48ffa0199e640fec21dc9212c44e8",
+      "exact_match": true
+    }
+  ],
+  "scholarly_pdf_title_match": true,
+  "citation_pdf_url_matches_verified_asset": true
+}

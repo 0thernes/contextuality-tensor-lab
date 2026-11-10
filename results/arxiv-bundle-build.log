@@ -1,0 +1,11 @@
+note: Running TeX ...
+note: Rerunning TeX because "contextuality-tensor.aux" changed ...
+note: Running xdvipdfmx ...
+note: Writing `contextuality-tensor.pdf` (97.90625 KiB)
+note: Skipped writing 2 intermediate files (use --keep-intermediates to keep them)
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: contextuality-tensor.tex:299: Overfull \hbox (0.95824pt too wide) in paragraph at lines 297--299
+warning: contextuality-tensor.tex:307: Underfull \hbox (badness 1571) in paragraph at lines 305--307
+warning: contextuality-tensor.tex:299: Overfull \hbox (0.95824pt too wide) in paragraph at lines 297--299
+warning: contextuality-tensor.tex:307: Underfull \hbox (badness 1571) in paragraph at lines 305--307
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

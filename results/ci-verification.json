@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "commit": "de48ed9002e930825f1cf5f140c8dc8cbfdc1ea0",
+  "workflow_url": "https://github.com/0thernes/contextuality-tensor-lab/actions/runs/42751584064",
+  "platform": "Ubuntu GitHub Actions",
+  "exact_and_independent_tests": "passed",
+  "formal_build": "passed",
+  "axiom_audit_theorems": 153,
+  "compiler": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "all_formal_source_hashes_match_local": true
+}
